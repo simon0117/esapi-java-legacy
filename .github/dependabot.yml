@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    ignore:
+        # ESAPI cannot upgrade past the current commons-io version and still maintain Java 7 compatibility
+      - dependency-name: "commons-io:commons-io"
+        versions: ["2.6"]
+        # Log4J 1.x is deprecated for future removal
+      - dependency-name: "log4j:log4j"
+        versions: ["1.2.17"]
