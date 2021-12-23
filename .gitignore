@@ -12,6 +12,9 @@
 out/
 bin/
 
+# macOS files
+.DS_Store
+
 # Leftover test files
 ciphertext-portable.ser
 ReferenceEncryptedProperties.test.txt
